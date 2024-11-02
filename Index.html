@@ -6,8 +6,31 @@
     <title>Document</title>
 </head>
 <body>
-    oleg.github.io Славков Олег Владимирович гр.3239
-    <a href="22oct24.html"> 22 октября 2024 </a> <br>
-    <a href="23oct24.html"> 23 октября 2024 </a>
+    <input type="text" id = 'myText'>
+    <div id="result"></div>
+    <button onclick="f1()">Длина строки</button>
+    <button onclick="f2()">Сделать буквы заглавными</button>
+    <button onclick="f3()">Перевернуть слово</button>
+
+    <script>
+        let myText = document.getElementById('myText')
+        let result = document.getElementById('result')
+
+        function f1(){
+            let string = myText.value;        
+            result.innerText = string.length;
+        }
+        function f2(){
+            let string = myText.value;
+            result.innerText = string.toUpperCase();
+        }
+        function f3(){
+            let string = myText.value;
+            let strToArr = string.split('');
+            result.innerText = strToArr.reverse();
+
+        }
+
+    </script>
 </body>
 </html>
